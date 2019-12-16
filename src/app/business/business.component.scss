@@ -1,0 +1,132 @@
+@import "../variables.scss";
+
+.form-check {
+  padding-left: 0;
+  margin-top: .3rem;
+
+  input, label {
+    display: inline-block;
+    vertical-align: middle;
+    line-height: 1;
+    color: $usps-drk-gray;
+  }
+
+  label {
+    font-weight: bold;
+    font-size: 1.25rem;
+  }
+
+  input {
+    position: relative;
+
+    &[type="checkbox"] {
+      -webkit-appearance: none;
+      width: 2rem;
+      height: 2rem;
+      background-color: $white;
+      border-radius: 2px;
+      border: 1px solid $usps-mid-gray;
+      margin: 0 .75rem 0 0;
+    }
+
+    &[type="radio"] {
+      -webkit-appearance: none;
+      width: 2rem;
+      height: 2rem;
+      background-color: $white;
+      border-radius: 100%;
+      border: 1px solid $usps-mid-gray;
+      margin: 0 .75rem 0 0;
+    }
+
+    &:focus {
+      outline: none;
+      border-color: $usps-blue;
+    }
+
+    &:checked {
+      background-color: $usps-green;
+      border-color: $usps-green;
+
+      &:focus {
+        opacity: 0.75;
+      }
+    }
+  }
+}
+
+.block-group {
+  display: flex;
+  flex-flow: row wrap;
+  align-content: flex-start;
+  flex-direction: column;
+
+  .form-check {
+    display: inline-block;
+    background-color: $white;
+    border-radius: 2px;
+    border: 1px solid $usps-mid-gray;
+    padding: 0.75rem 5rem 0.75rem 0.75rem;
+    margin: 2rem 0 1rem 0;
+    &:first-of-type {
+      margin-top: 0;
+    }
+
+    .label-explainer {
+      font-weight: normal;
+      margin-top: 0.5rem;
+
+      display: flex;
+      flex-wrap: wrap;
+    }
+  }
+
+  .radio-size{
+    width: 13.6rem;
+    margin: .5rem 0 .5rem 0;
+  }
+
+  &.card-choices {
+    text-align: center;
+    flex-direction: row;
+    justify-content: flex-start;
+
+    .form-check {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 1rem;
+      margin: 1rem 2rem 0 0;
+      width: 15rem;
+      min-height: 18rem;
+
+      input {
+        margin: 0 0 auto auto;
+      }
+
+      img {
+        margin: 0.5rem 0 0.5rem 0;
+        width: 100%;
+      }
+    }
+  }
+}
+
+.container-spacer {
+  margin-top: 4rem;
+  margin-bottom: 4rem;
+}
+
+.container-fluid {
+  background-color: $usps-whitesmoke;
+}
+
+.business-intro{
+  max-width: 85%;
+}
+
+@media only screen and (max-width: 470px) {
+  .form-check {
+    min-width: 100%;
+  }
+}

@@ -1,0 +1,97 @@
+@import "variables.scss";
+
+h1, h2, h3, h4, h5 {
+  color: $usps-blue;
+  font-weight: bold;
+}
+
+h1 {
+  font-size: 2rem;
+}
+
+h2 {
+  font-size: 1.75rem;
+}
+
+h3 {
+  font-size: 1.375rem;
+}
+
+h4 {
+  font-size: 1.125rem;
+}
+
+h5 {
+  font-size: 1rem;
+}
+
+button {
+  vertical-align: top;
+  padding: 0.875rem 1.25rem;
+  border: 1px solid $usps-mid-gray;
+  font-weight: bold;
+  background-color: $usps-mid-gray;
+  border-radius: 0.1875rem;
+  font-size: 1rem;
+  line-height: 1;
+  // height: 2.75rem;
+  // 16px font + 14px top,bottom padding = 44px
+
+  &.primary-btn {
+    background-color: $usps-blue;
+    border-color: $usps-blue;
+    color: $white;
+
+    &:hover, &:focus {
+      color: $usps-blue;
+    }
+  }
+
+  &.secondary-btn {
+    background-color: $white;
+    color: $usps-blue;
+    border: 1px solid $usps-blue;
+
+    &:hover, &:focus {
+      color: $usps-blue;
+      border-color: $usps-blue;
+    }
+  }
+
+  &.inactive-btn {
+    background-color: $usps-mid-gray;
+    border-color: $usps-mid-gray;
+    color: $usps-drk-gray;
+
+    &:hover, &:focus {
+      background-color: $usps-mid-gray;
+      border-color: $usps-mid-gray;
+    }
+  }
+
+  &.purchase-btn {
+    background-color: $usps-green;
+    border-color: $usps-green;
+    color: $white;
+
+    &:hover, &:focus {
+      background-color: $usps-mid-gray;
+      border-color: $usps-mid-gray;
+      color: $usps-green;
+    }
+  }
+
+  &.icon-btn {
+    .cta-icon {
+      display: inline-block;
+      vertical-align: middle;
+      line-height: 1;
+      margin-right: 0.75rem;
+    }
+  }
+
+  &:hover, &:focus {
+    background-color: $usps-lt-gray;
+    border-color: $usps-lt-gray;
+  }
+}
